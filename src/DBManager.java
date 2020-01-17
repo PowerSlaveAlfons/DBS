@@ -11,7 +11,7 @@ public class DBManager
 
 //step2 create  the connection object
             Connection con= DriverManager.getConnection(
-                    "jdbc:oracle:thin:@infdb.technikum-wien.at:1521:o10","w19bif3_if18b115","dbsw19");
+                    "ORACELINFO","w19bif3_if18bxxx","xxx");
 
 //step3 create the statement object
             Statement stmt=con.createStatement();
