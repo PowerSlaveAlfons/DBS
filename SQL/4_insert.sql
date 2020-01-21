@@ -701,7 +701,6 @@ UNION ALL
     30
   FROM dual
 );
------------------------------------------------------------------------------------------------- to be continued...
 
 /*************/
 /* ROLE */
@@ -1140,8 +1139,6 @@ UNION ALL
   FROM dual
 );
 
------------------------------------------------------------------------------------------------- to be continued...
-
 /*************/
 /* LEAGUE */
 /*************/
@@ -1262,7 +1259,7 @@ UNION ALL
     10,
     'BitchesK1ll4',
     to_date(
-      '15/02/2024',
+      '15/02/2014',
       'DD/MM/YYYY'
     )
   FROM dual
@@ -3146,7 +3143,7 @@ INSERT INTO match
     1,
     2,
     1,
-    DATE('2020-01-05')
+    TO_DATE('2020-01-01', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3155,7 +3152,7 @@ UNION ALL
     3,
     4,
     4,
-    '2020-01-05'
+    TO_DATE('2020-01-01', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3164,7 +3161,7 @@ UNION ALL
     5,
     6,
     6,
-    '2020-01-05'
+    TO_DATE('2020-01-02', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3173,7 +3170,7 @@ UNION ALL
     7,
     8,
     8,
-    '2020-01-05'
+    TO_DATE('2020-01-03', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3182,7 +3179,7 @@ UNION ALL
     9,
     10,
     9,
-    '2020-01-05'
+    TO_DATE('2020-01-04', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3191,7 +3188,7 @@ UNION ALL
     11,
     12,
     11,
-    '2020-01-05'
+    TO_DATE('2020-01-04', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3200,7 +3197,7 @@ UNION ALL
     13,
     14,
     14,
-    '2020-01-05'
+    TO_DATE('2020-01-05', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3209,7 +3206,7 @@ UNION ALL
     15,
     16,
     15,
-    '2020-01-05'
+    TO_DATE('2020-01-04', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3218,7 +3215,7 @@ UNION ALL
     17,
     18,
     17,
-    '2020-01-05'
+    TO_DATE('2020-01-05', 'yyyy-mm-dd')
   FROM dual
 )
 UNION ALL
@@ -3227,6 +3224,6 @@ UNION ALL
     19,
     20,
     20,
-    '2020-01-05'
+    TO_DATE('2020-01-05', 'yyyy-mm-dd')
   FROM dual
 );
