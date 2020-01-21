@@ -74,14 +74,14 @@ ORDER BY test DESC;
 /******************************************************************/
 /** Table/view: Monsterslayer */
 /** Developer: XXXXXXXXXXXXXXXX */
-/** Description: Shows how's slain the most monsters */
+/** Description: Shows who's slain the most monsters */
 /******************************************************************/
 
 CREATE OR REPLACE VIEW monsterslayer
 AS
 SELECT
   pl.name,
-  sum(count) monsters
+  sum(amount) monsters
 FROM player_statistic ps
   JOIN player_statistic_monster psm
     ON ps.pk_id = psm.fk_player_statistic_id
@@ -91,6 +91,7 @@ FROM player_statistic ps
     ON psm.fk_monster_id = m.pk_id
 GROUP BY pl.name
 ORDER BY monsters DESC;
+
 
 /******************************************************************/
 /** Table/view: KDA */

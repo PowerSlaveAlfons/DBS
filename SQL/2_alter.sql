@@ -151,3 +151,10 @@ ALTER TABLE player_statistic_monster ADD CONSTRAINT player_statistic_monster
 	REFERENCES player_statistic (pk_id)
 	ON DELETE CASCADE
 ;
+
+/********/
+/* TYPE_ARRAY */
+/*******/
+
+CREATE TYPE t_array
+    IS TABLE OF VARCHAR2(200);

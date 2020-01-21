@@ -1,5 +1,5 @@
 --set serveroutput on;
---/
+--
 
 /******************************************************************
 /** Function: showKdaOf */
@@ -55,43 +55,51 @@ END;
 /** Description: Function searches in the View Champions for matching labels */
 /*********************************************************************/
 
-create or replace procedure sp_showChampwithRole_v(l_v_rolename_in varchar2)
+create or replace function f_showChampwithRole_v(l_v_rolename_in varchar2)
+return t_array
 is
-	Cursor l_champions_cur is
-		SELECT NAME, label from champions
-		where LOWER(label) like LOWER(l_v_rolename_in)
-		order by name;
-		
-		l_r_name_cv varchar(32);
-		l_r_label_cv varchar(32);
-		
-		l_x_roledoesntexist exception;
-		l_n_exceptionHelper number;
+    Cursor l_champions_cur is
+        SELECT NAME, label from champions
+        where LOWER(label) like LOWER(l_v_rolename_in)
+        order by name;
+
+        l_string_array_ou t_array := new t_array('Champion-Name    |    Role');
+
+        l_r_name_cv varchar(32);
+        l_r_label_cv varchar(32);
+
+        l_x_roledoesntexist exception;
+        l_n_exceptionHelper number;
 BEGIN
-	OPEN l_champions_cur;
-	
-	SELECT count(*) INTO l_n_exceptionHelper from	champions
-	where LOWER(label) like LOWER(l_v_rolename_in);
-	
-	if l_n_exceptionHelper = 0 then
-		raise l_x_roledoesntexist;
-	END IF;
-	
-	DBMS_OUTPUT.PUT_LINE('Champion-Name	|	Role');
-	DBMS_OUTPUT.PUT_LINE('=====================');
-	
-	LOOP
-		FETCH l_champions_cur into l_r_name_cv, l_r_label_cv;
-			EXIT when l_champions_cur%NOTFOUND;
-		DBMS_OUTPUT.PUT_LINE(l_r_name_cv||' | '||l_r_label_cv);
-	END LOOP;
-	CLOSE l_champions_cur;
-			
-	EXCEPTION
-	when l_x_roledoesntexist then
-			DBMS_OUTPUT.PUT_LINE( 'Die Rolle ' || l_v_rolename_in || ' existiert nicht!');
-			raise;
-		
+    OPEN l_champions_cur;
+
+    SELECT count(*) INTO l_n_exceptionHelper from    champions
+    where LOWER(label) like LOWER(l_v_rolename_in);
+
+    if l_n_exceptionHelper = 0 then
+        raise l_x_roledoesntexist;
+    END IF;
+
+    l_string_array_ou.extend;
+    l_string_array_ou(2) := '=====================';
+
+    FOR i in 3..153
+    LOOP
+        FETCH l_champions_cur into l_r_name_cv, l_r_label_cv;
+            EXIT when l_champions_cur%NOTFOUND;
+        l_string_array_ou.extend;
+        l_string_array_ou(i) := l_r_name_cv||' | '||l_r_label_cv;
+    END LOOP;
+
+    CLOSE l_champions_cur;
+
+    return l_string_array_ou;
+
+    EXCEPTION
+    when l_x_roledoesntexist then
+            DBMS_OUTPUT.PUT_LINE( 'Die Rolle ' || l_v_rolename_in || ' existiert nicht!');
+            raise;
+
 END;
 /
 
