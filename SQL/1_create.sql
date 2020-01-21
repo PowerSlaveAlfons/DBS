@@ -1,5 +1,6 @@
 /******************************************************************/
 /** Table: Champions */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains the attributes of every champion */
 /******************************************************************/
 CREATE TABLE champion(
@@ -18,6 +19,7 @@ COMMENT ON TABLE champion IS 'Contains the attributes of every champion';
 
 /******************************************************************/
 /** Table: Role */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains all types of roles that several champions can take (N:N Relation!) */
 /******************************************************************/
 
@@ -31,6 +33,7 @@ COMMENT ON TABLE role IS 'Contains all roles that several champions can take (N:
 
 /******************************************************************/
 /** Table: League */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains all types of leagues that a player can be in */
 /******************************************************************/
 
@@ -43,6 +46,7 @@ COMMENT ON TABLE league IS 'Contains all types of leagues that a player can be i
 
 /******************************************************************/
 /** Table: Monster */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains all types of monsters that a player can slay (N:N Relation!) */
 /******************************************************************/
 
@@ -57,6 +61,7 @@ COMMENT ON TABLE monster IS 'Contains all types of monsters that a player can sl
 
 /******************************************************************/
 /** Table: Player */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains information about a player and its account */
 /******************************************************************/
 
@@ -72,6 +77,7 @@ COMMENT ON TABLE player IS 'Contains information about a player and its account'
 
 /******************************************************************/
 /** Table: Player Statistic */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains the final statistics of one player of a specific game */
 /******************************************************************/
 
@@ -90,6 +96,7 @@ COMMENT ON TABLE player_statistic IS 'Contains the final statistics of one playe
 
 /******************************************************************/
 /** Table: Team */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains five player statistics ids that form one unique team for one unique match */
 /******************************************************************/
 
@@ -107,6 +114,7 @@ COMMENT ON TABLE team IS 'Contains five player statistics ids that form one uniq
 
 /******************************************************************/
 /** Table: Match */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains all information about one unique match */
 /******************************************************************/
 CREATE TABLE match(
@@ -121,6 +129,7 @@ COMMENT ON TABLE match IS 'Contains all information about one unique match';
 
 /******************************************************************/
 /** Table: Champion <-> Role */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Connects champions and their roles */
 /******************************************************************/
 CREATE TABLE champion_role(
@@ -131,6 +140,7 @@ COMMENT ON TABLE champion_role IS 'Connects champions and their roles';
 
 /******************************************************************/
 /** Table: Player Statistic <-> Monster */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Connects player statistics to the monsters that the player has slain */
 /******************************************************************/
 

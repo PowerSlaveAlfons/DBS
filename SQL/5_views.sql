@@ -1,6 +1,6 @@
 /******************************************************************/
 /** Table/view: Champions */
-/** Developer: XXXXXXXXXXXXXXXX */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Contains all information about champions */
 /******************************************************************/
 
@@ -24,7 +24,7 @@ FROM champion
 
 /******************************************************************/
 /** Table/view: Champion Wins */
-/** Developer: XXXXXXXXXXXXXXXX */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: shows how many games a champion has won */
 /******************************************************************/
 
@@ -53,7 +53,7 @@ ORDER BY victorys DESC;
 
 /******************************************************************/
 /** Table/view: Rank Distribution */
-/** Developer: XXXXXXXXXXXXXXXX */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Shows Rank distribution in the leagues */
 /******************************************************************/
 
@@ -73,7 +73,7 @@ ORDER BY test DESC;
 
 /******************************************************************/
 /** Table/view: Monsterslayer */
-/** Developer: XXXXXXXXXXXXXXXX */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Shows who's slain the most monsters */
 /******************************************************************/
 
@@ -95,7 +95,7 @@ ORDER BY monsters DESC;
 
 /******************************************************************/
 /** Table/view: KDA */
-/** Developer: XXXXXXXXXXXXXXXX */
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Kill-Death-Assists-Ratio */
 /******************************************************************/
 CREATE OR REPLACE VIEW kda

@@ -2,7 +2,7 @@
 /** Trigger: rank_distribution **/
 /** Type: Before row **/
 /** Type Extension: update **/
-/** Developer: XXXXXXXXXXXXXXXXX **/
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: Sets the KDA to default 0 if nothing is inserted **/
 /*********************************************************************/
 
@@ -28,7 +28,7 @@ END;
 /** Trigger: init_player **/
 /** Type: Before row **/
 /** Type Extension: insert **/
-/** Developer: XXXXXXXXXXXXXXXXX **/
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: initially ranks news players as unranked and sets date created to sysdate **/
 /*********************************************************************/
 
@@ -47,7 +47,7 @@ end;
 /** Trigger: rank_progress **/
 /** Type: Before row **/
 /** Type Extension: update **/
-/** Developer: XXXXXXXXXXXXXXXXX **/
+/** Developer: Stefan Alfons, Constantin Akamphuber, Io Gschwentner, Philip Ewert*/
 /** Description: makes sure that a player must climb one rank by one **/
 /*********************************************************************/
 
